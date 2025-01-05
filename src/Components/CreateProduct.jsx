@@ -47,37 +47,48 @@ const CreateProduct = ({ refreshProducts }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border">
-      <h3>Create Product</h3>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-black">
+  <div>
+    <h3 className="text-center text-white mb-4">Create New Product</h3>
+    <form
+      onSubmit={handleSubmit}
+      className="p-4 border rounded shadow bg-white "
+      style={{ width: '500px' }}
+    >
       <div className="mb-3">
-        <label>Product Name</label>
-        <input type="text" name="product_name" className="form-control" value={formData.product_name} onChange={handleChange} required />
+        <input
+          type="text"
+          name="product_name"
+          placeholder="Product Name"
+          className="form-control"
+          value={formData.product_name}
+          onChange={handleChange}
+          required
+        />
       </div>
 
-      <div className="mb-3">
-        <label>Original Price</label>
-        <input type="number" name="original_price" className="form-control" value={formData.original_price} onChange={handleChange} required />
-      </div>
+        <div className="mb-3">
+          <input type="number" name="original_price" placeholder='Original Price' className="form-control" value={formData.original_price} onChange={handleChange} required />
+        </div>
 
-      <div className="mb-3">
-        <label>Sale Price</label>
-        <input type="number" name="sale_price" className="form-control" value={formData.sale_price} onChange={handleChange} required />
-      </div>
+        <div className="mb-3">
+          <input type="number" name="sale_price" placeholder='Sale Price' className="form-control" value={formData.sale_price} onChange={handleChange} required />
+        </div>
 
-      <div className="mb-3">
-        <label>Product Type</label>
-        <input type="text" name="product_type" className="form-control" value={formData.product_type} onChange={handleChange} required />
-      </div>
+        <div className="mb-3">
+          <input type="text" name="product_type" placeholder='Product Type' className="form-control" value={formData.product_type} onChange={handleChange} required />
+        </div>
 
-      <div className="mb-3">
-        <label>Description</label>
-        <textarea name="description" className="form-control" value={formData.description} onChange={handleChange} required></textarea>
-      </div>
+        <div className="mb-3">
+          <textarea name="description" placeholder='Description' className="form-control" value={formData.description} onChange={handleChange} required></textarea>
+        </div>
 
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+        <button type="submit" className="btn btn-primary w-100">
+          Create
+        </button>
+      </form>
+    </div>
+    </div>
   );
 };
 

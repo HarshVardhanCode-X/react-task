@@ -60,10 +60,12 @@ const ProductTable = () => {
   console.log('Filtered Products:', filteredProducts);
 
   return (
-    <div className="mt-4">
-      <h3>Product List</h3>
+    <div className="p-5 bg-black text-white">
+      <div className='d-flex justify-content-between'>
+        <h3>All Products</h3>
 
-      <input type="text" placeholder="Search by Name" className="form-control mb-3" value={search}onChange={(e) => setSearch(e.target.value)}/>
+        <input type="text" placeholder="Search" className="form-control mb-3" style={{width:"150px"}} value={search}onChange={(e) => setSearch(e.target.value)}/>
+      </div>
 
       <table className="table table-bordered">
         <thead>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CreateProduct from './Components/CreateProduct';
 import ProductTable from './Components/ProductTable';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [refresh, setRefresh] = useState(false);
@@ -10,10 +11,10 @@ const App = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <>
       <CreateProduct refreshProducts={refreshProducts} />
       <ProductTable key={refresh} />
-    </div>
+    </>
   );
 };
 
